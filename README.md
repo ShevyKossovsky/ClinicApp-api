@@ -9,72 +9,76 @@
 
 **ישויות**
 
- - אדם
+ - person
    
-   רופא-יורש מאדם
+ - personרופא-יורש מ
+
    
-   פציינט-יורש מאדם
+
+ - personפציינט -יורש מ
+
    
-   תור
+
+ - תור
 
 **מיפוי מסלולים לרופא**
 
-_ שליפת רשימת רופא _
+*שליפת רשימת רופא* 
 
-קבל: https //ClinicApp/Doctor
+GET: https //ClinicApp/Doctor
 
-_ שליפת רופא לפי מזהה _
+*שליפת רופא לפי מזהה* 
 
-קבל: https //ClinicApp/Doctor/1
+GET: https //ClinicApp/Doctor/1
 
-_ הוספת רופא _
+ *הוספת רופא* 
 
-פוסט: https // ClinicApp/Doctor
+POST: https // ClinicApp/Doctor
 
-_ עדכון רופא _
+ *עדכון רופא* 
 
 PUT: https // ClinicApp/Doctor /1
 
-_ מחיקת רופא _
+ *מחיקת רופא* 
 
 DELTE: https // ClinicApp/Doctor /1
 
 **מיפוי מסלולים לפציינט**
 
-_ שליפת רשימת פציינט _
+*שליפת רשימת פציינט* 
 
-קבל: https //ClinicApp/Patient
+GET: https //ClinicApp/Patient
 
-_ שליפת פציינט לפי מזהה _
+*שליפת פציינט לפי מזהה* 
 
-קבל: https //ClinicApp/ מטופל /1
+GET: https //ClinicApp/ מטופל /1
 
-_ הוספת פציינט _
+ *הוספת פציינט* 
 
-פוסט: https // ClinicApp/ מטופל
+POST: https // ClinicApp/ מטופל
 
-_ מחיקת פציינט _
+ *מחיקת פציינט* 
 
 DELTE: https // ClinicApp/Doctor /1
 
-_ עדכון סטטוס פציינט _
+*עדכון סטטוס פציינט* 
 
 PUT: https // ClinicApp/ Patient /1/status
 
 **מיפוי מסלולים לתורים**
 
-_ שליפת רשימת תורים _
+*שליפת רשימת תורים* 
 
-קבל: https //ClinicApp/פגישה
+GET: https //ClinicApp/פגישה
 
-_ שליפת תור לפי מזהה _
+*שליפת תור לפי מזהה* 
 
-קבל: https //ClinicApp/ פגישה /1
+GET: https //ClinicApp/ פגישה /1
 
-_ הוספת תור _
+ *הוספת תור* 
 
-פוסט: https // ClinicApp/ פגישה
+POST: https // ClinicApp/ פגישה
 
-_ מחיקת תור _
+ *מחיקת תור* 
 
 DELTE: https // ClinicApp/Appointment /1
