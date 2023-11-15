@@ -10,18 +10,12 @@
 **ישויות**
 
  - person
-   
  - personרופא-יורש מ
-
-   
-
  - personפציינט -יורש מ
-
-   
-
  - תור
 
 **מיפוי מסלולים לרופא**
+
 
 *שליפת רשימת רופא* 
 
@@ -45,6 +39,7 @@ DELTE: https // ClinicApp/Doctor /1
 
 **מיפוי מסלולים לפציינט**
 
+
 *שליפת רשימת פציינט* 
 
 GET: https //ClinicApp/Patient
@@ -66,6 +61,7 @@ DELTE: https // ClinicApp/Doctor /1
 PUT: https // ClinicApp/ Patient /1/status
 
 **מיפוי מסלולים לתורים**
+
 
 *שליפת רשימת תורים* 
 
