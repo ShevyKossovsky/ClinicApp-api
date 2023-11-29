@@ -5,24 +5,27 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ClinicApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("ClinicApp/[controller]")]
     [ApiController]
     public class AppointmentController : ControllerBase
     {
-        public static List<Appointment> appointmentsList = new List<Appointment>() { };
+       private readonly DataContext _dataContext;
 
+        public AppointmentController()
+        {
+            _dataContext = new DataContext();
+        }
         // GET: api/<AppointmentController>
         [HttpGet]
-        public IEnumerable<Appointment> Get()
-        {
-            return appointmentsList;
+        public IEnumerable<Appointment> Get() {
+            return _dataContext.appointmentsList;
         }
 
         // GET api/<AppointmentController>/5
         [HttpGet("{id}")]
         public Appointment? Get(int id)
         {
-            foreach (var item in appointmentsList)
+            foreach (var item in _dataContext.appointmentsList)
             {
                 if(item.id == id)
                     return item;
@@ -34,14 +37,14 @@ namespace ClinicApp.Controllers
         [HttpPost]
         public void Post([FromBody] Appointment value)
         {
-            appointmentsList.Add(value);
+            _dataContext.appointmentsList.Add(value);
         }
 
         // PUT api/<AppointmentController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Appointment value)
         {
-            foreach (var item in appointmentsList) 
+            foreach (var item in _dataContext.appointmentsList) 
             { 
                 if(item.id == id)
                 {
@@ -59,11 +62,11 @@ namespace ClinicApp.Controllers
         public void Delete(int id)
         {
             foreach
-                (Appointment appointment in appointmentsList)
+                (Appointment appointment in _dataContext.appointmentsList)
             {
                 if(appointment.id==id)
                 {
-                    appointmentsList.Remove(appointment);
+                    _dataContext.appointmentsList.Remove(appointment);
                     return;
                 }
 

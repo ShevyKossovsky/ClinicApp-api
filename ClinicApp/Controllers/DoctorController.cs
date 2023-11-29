@@ -10,22 +10,25 @@ namespace ClinicApp.Controllers
 
     public class DoctorController : ControllerBase
     {
-        public static List<Doctor> doctorsList = new List<Doctor>
-        {new Doctor(){ name="rohi Grosman", idNumber="215225588"
-            ,dateOfBirth=new DateTime(1967,5,2) ,workingHoursAmount=10} };
+        private readonly DataContext _dataContext;
+
+        public DoctorController()
+        {
+            _dataContext = new DataContext();
+        }
         // GET: api/<DoctorController>
         [HttpGet]
 
         public IEnumerable<Doctor> Get()
         {
-            return doctorsList;
+            return _dataContext.doctorsList;
         }
 
         // GET api/<DoctorController>/5
         [HttpGet("{id}")]
         public Doctor? Get(int id)
         {
-            foreach (var item in doctorsList)
+            foreach (var item in _dataContext.doctorsList)
             {
                 if (item.id == id) { return item; };
             }
@@ -37,14 +40,14 @@ namespace ClinicApp.Controllers
         [HttpPost]
         public void Post([FromBody] Doctor value)
         {
-            doctorsList.Add(value);
+            _dataContext.doctorsList.Add(value);
         }
 
         // PUT api/<DoctorController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Doctor value)
         {
-            foreach (var item in doctorsList)
+            foreach (var item in _dataContext.doctorsList)
             {
                 if (item.id == id) 
                 {
@@ -61,11 +64,11 @@ namespace ClinicApp.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            foreach (var item in doctorsList)
+            foreach (var item in _dataContext.doctorsList)
             {
                 if (item.id == id)
                 {
-                    doctorsList.Remove(item);
+                    _dataContext.doctorsList.Remove(item);
                     return;
                 };
 

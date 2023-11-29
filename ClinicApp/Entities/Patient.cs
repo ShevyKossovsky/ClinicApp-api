@@ -11,7 +11,16 @@ namespace ClinicApp.Entities
     public class Patient : Person
     {
         public HMO HMO { get; set; }
+        public bool status { get; set; }
 
+        public Patient(HMO hMO,bool status)
+        {
+            HMO = hMO;
+            this.status = status;
+        }
 
+        public Patient()
+        {
+        }
     }
 }

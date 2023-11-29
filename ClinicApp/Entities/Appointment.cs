@@ -11,30 +11,17 @@
         public DateTime appointmentDate { get; set; }
         public int durationInMinutes { get; set; }
 
-        public List<Appointment> appointments = new List<Appointment>()
-{
-    new Appointment()
-    {
-        doctor = new Doctor()
+        public Appointment(Patient patient, Doctor doctor, string causeOfReferral, DateTime appointmentDate, int durationInMinutes)
         {
-            name = "Rohi Grosman",
-            idNumber = "215225588",
-            dateOfBirth = new DateTime(1967, 5, 2)
-        },
-        patient = new Patient()
-        {
-            name = "Yossi Cohen",
-            idNumber = "32658874",
-            dateOfBirth = new DateTime(2000, 11, 4),
-            HMO = HMO.Meuchedet
-        },
-        appointmentDate = new DateTime(2023, 11, 12, 18, 0, 0),
-        causeOfReferral = "sore throat",
-        durationInMinutes = 10
-    }
-};
+            this.id = ++count;
+            this.patient = patient;
+            this.doctor = doctor;
+            this.causeOfReferral = causeOfReferral;
+            this.appointmentDate = appointmentDate;
+            this.durationInMinutes = durationInMinutes;
+        }
 
-        Appointment()
+        public Appointment()
         {
             this.id = ++count;
         }

@@ -13,6 +13,14 @@
             return DateTime.Now.Year - dateOfBirth.Year;
         }
 
+        public Person(int id, string name, string idNumber, DateTime dateOfBirth)
+        {
+            this.id = ++count;
+            this.name = name;
+            this.idNumber = idNumber;
+            this.dateOfBirth = dateOfBirth;
+        }
+
         public Person()
         {
             id = ++count;
