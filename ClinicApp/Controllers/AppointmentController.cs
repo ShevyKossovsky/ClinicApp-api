@@ -1,4 +1,6 @@
-﻿using ClinicApp.Entities;
+﻿
+using ClinicApp.Core.Services;
+using ClinicApp.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,68 +11,44 @@ namespace ClinicApp.Controllers
     [ApiController]
     public class AppointmentController : ControllerBase
     {
-       private readonly DataContext _dataContext;
+       private readonly IAppointmentService _appointmentService;
 
-        public AppointmentController()
+        public AppointmentController(IAppointmentService appointmentService)
         {
-            _dataContext = new DataContext();
+            _appointmentService = appointmentService;
         }
         // GET: api/<AppointmentController>
         [HttpGet]
         public IEnumerable<Appointment> Get() {
-            return _dataContext.appointmentsList;
+            return _appointmentService.Get();
         }
 
         // GET api/<AppointmentController>/5
         [HttpGet("{id}")]
         public Appointment? Get(int id)
         {
-            foreach (var item in _dataContext.appointmentsList)
-            {
-                if(item.id == id)
-                    return item;
-            }
-            return null;
+            return _appointmentService.GetById(id); 
         }
 
         // POST api/<AppointmentController>
         [HttpPost]
         public void Post([FromBody] Appointment value)
         {
-            _dataContext.appointmentsList.Add(value);
+           _appointmentService.Add(value);  
         }
 
         // PUT api/<AppointmentController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Appointment value)
         {
-            foreach (var item in _dataContext.appointmentsList) 
-            { 
-                if(item.id == id)
-                {
-                    item.patient = value.patient;
-                    item.doctor=value.doctor;
-                    item.durationInMinutes = value.durationInMinutes;
-                    item.appointmentDate = value.appointmentDate;   
-                      
-                }
-            }
+            _appointmentService.Update(id, value);  
         }
 
         // DELETE api/<AppointmentController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            foreach
-                (Appointment appointment in _dataContext.appointmentsList)
-            {
-                if(appointment.id==id)
-                {
-                    _dataContext.appointmentsList.Remove(appointment);
-                    return;
-                }
-
-            }
+            _appointmentService.Delete(id);
         }
     }
 }

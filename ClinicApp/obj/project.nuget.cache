@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u73RJLv0TCEJIty9PNZFVzBkanL0kG7Jvegn/uxAZd7+C89Q5zEgWUF7iretrHwZM64pdk6tRxH1ggk++Vg3Pg==",
+  "dgSpecHash": "y4Ez9e3vnGx+lce9QyBXrUxWRWJ/2blq6T1XqJNu/dMjuYfiMKQFI2H3iWqRwGatzfCZk/zj4gh88tVSKyZeqg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Desktop\\הנדסת תוכנה\\שנה ב\\.net Core\\ClinicApp\\ClinicApp\\ClinicApp.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Desktop\\הנדסת תוכנה\\שנה ב\\.net Core\\ClinicApp\\ClinicApp\\ClinicApp.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

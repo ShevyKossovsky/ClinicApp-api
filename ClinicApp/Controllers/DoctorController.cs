@@ -1,4 +1,6 @@
-﻿using ClinicApp.Entities;
+﻿using ClinicApp.Core.Entities;
+using ClinicApp.Core.Services;
+using ClinicApp.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -10,69 +12,47 @@ namespace ClinicApp.Controllers
 
     public class DoctorController : ControllerBase
     {
-        private readonly DataContext _dataContext;
+        private readonly IDoctorService _doctorService;
 
-        public DoctorController()
+        public DoctorController(IDoctorService doctorService)
         {
-            _dataContext = new DataContext();
+           _doctorService = doctorService;
         }
         // GET: api/<DoctorController>
         [HttpGet]
 
         public IEnumerable<Doctor> Get()
         {
-            return _dataContext.doctorsList;
+            return (IEnumerable<Doctor>)_doctorService.Get();
         }
 
         // GET api/<DoctorController>/5
         [HttpGet("{id}")]
         public Doctor? Get(int id)
         {
-            foreach (var item in _dataContext.doctorsList)
-            {
-                if (item.id == id) { return item; };
-            }
-            Console.WriteLine("No such a doctor id");
-            return null;
+           return _doctorService.GetById(id);
         }
 
         // POST api/<DoctorController>
         [HttpPost]
         public void Post([FromBody] Doctor value)
         {
-            _dataContext.doctorsList.Add(value);
+            _doctorService.Add(value);
         }
 
         // PUT api/<DoctorController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Doctor value)
         {
-            foreach (var item in _dataContext.doctorsList)
-            {
-                if (item.id == id) 
-                {
-                    item.idNumber=value.idNumber;
-                    item.name=value.name;
-                    item.workingHoursAmount=value.workingHoursAmount;
-                    item.dateOfBirth=value.dateOfBirth;
-                };
-
-            }
+            _doctorService.Update(id, value);
         }
+        
 
         // DELETE api/<DoctorController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            foreach (var item in _dataContext.doctorsList)
-            {
-                if (item.id == id)
-                {
-                    _dataContext.doctorsList.Remove(item);
-                    return;
-                };
-
-            }
+            _doctorService.Delete(id);
         }
 
 

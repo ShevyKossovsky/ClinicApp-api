@@ -107,6 +107,42 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "ClinicApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ClinicApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClinicApp.Core.dll": {}
+        }
+      },
+      "ClinicApp.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ClinicApp.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ClinicApp.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClinicApp.Data.dll": {}
+        }
+      },
+      "ClinicApp.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ClinicApp.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ClinicApp.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClinicApp.Service.dll": {}
+        }
       }
     }
   },
@@ -451,10 +487,28 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "ClinicApp.Core/1.0.0": {
+      "type": "project",
+      "path": "../ClinicApp.Core/ClinicApp.Core.csproj",
+      "msbuildProject": "../ClinicApp.Core/ClinicApp.Core.csproj"
+    },
+    "ClinicApp.Data/1.0.0": {
+      "type": "project",
+      "path": "../ClinicApp.Data/ClinicApp.Data.csproj",
+      "msbuildProject": "../ClinicApp.Data/ClinicApp.Data.csproj"
+    },
+    "ClinicApp.Service/1.0.0": {
+      "type": "project",
+      "path": "../ClinicApp.Service/ClinicApp.Service.csproj",
+      "msbuildProject": "../ClinicApp.Service/ClinicApp.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "ClinicApp.Core >= 1.0.0",
+      "ClinicApp.Data >= 1.0.0",
+      "ClinicApp.Service >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -466,9 +520,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user1\\Desktop\\הנדסת תוכנה\\שנה ב\\.net Core\\ClinicApp\\ClinicApp\\ClinicApp.csproj",
-      "projectName": "ClinicApp",
-      "projectPath": "C:\\Users\\user1\\Desktop\\הנדסת תוכנה\\שנה ב\\.net Core\\ClinicApp\\ClinicApp\\ClinicApp.csproj",
+      "projectUniqueName": "C:\\Users\\user1\\Desktop\\הנדסת תוכנה\\שנה ב\\.net Core\\ClinicApp\\ClinicApp\\ClinicApp.API.csproj",
+      "projectName": "ClinicApp.API",
+      "projectPath": "C:\\Users\\user1\\Desktop\\הנדסת תוכנה\\שנה ב\\.net Core\\ClinicApp\\ClinicApp\\ClinicApp.API.csproj",
       "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\user1\\Desktop\\הנדסת תוכנה\\שנה ב\\.net Core\\ClinicApp\\ClinicApp\\obj\\",
       "projectStyle": "PackageReference",
@@ -491,7 +545,17 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\user1\\Desktop\\הנדסת תוכנה\\שנה ב\\.net Core\\ClinicApp\\ClinicApp.Core\\ClinicApp.Core.csproj": {
+              "projectPath": "C:\\Users\\user1\\Desktop\\הנדסת תוכנה\\שנה ב\\.net Core\\ClinicApp\\ClinicApp.Core\\ClinicApp.Core.csproj"
+            },
+            "C:\\Users\\user1\\Desktop\\הנדסת תוכנה\\שנה ב\\.net Core\\ClinicApp\\ClinicApp.Data\\ClinicApp.Data.csproj": {
+              "projectPath": "C:\\Users\\user1\\Desktop\\הנדסת תוכנה\\שנה ב\\.net Core\\ClinicApp\\ClinicApp.Data\\ClinicApp.Data.csproj"
+            },
+            "C:\\Users\\user1\\Desktop\\הנדסת תוכנה\\שנה ב\\.net Core\\ClinicApp\\ClinicApp.Service\\ClinicApp.Service.csproj": {
+              "projectPath": "C:\\Users\\user1\\Desktop\\הנדסת תוכנה\\שנה ב\\.net Core\\ClinicApp\\ClinicApp.Service\\ClinicApp.Service.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "gEMLCYntODi1gaWX8878fhm3636KsUq/QfssuBe6KBI=",
-  "Source": "ClinicApp",
-  "BasePath": "_content/ClinicApp",
+  "Hash": "vV8uumXeGllI3zCDM0v20YLPxUuUHrcOdMNAmtq4o2M=",
+  "Source": "ClinicApp.API",
+  "BasePath": "_content/ClinicApp.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

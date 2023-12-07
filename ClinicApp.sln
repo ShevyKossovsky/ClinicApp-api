@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicApp", "ClinicApp\ClinicApp.csproj", "{FFAD4AA5-3257-4D29-9646-87F0665D07BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicApp.API", "ClinicApp\ClinicApp.API.csproj", "{FFAD4AA5-3257-4D29-9646-87F0665D07BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicApp.Core", "ClinicApp.Core\ClinicApp.Core.csproj", "{E1B55DCE-3741-45E4-9AE9-EB8360D172FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicApp.Data", "ClinicApp.Data\ClinicApp.Data.csproj", "{D430B9FA-4665-4811-9E53-99DF5751D5AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicApp.Service", "ClinicApp.Service\ClinicApp.Service.csproj", "{43FA3D23-59DA-4AE2-989E-545C85A08311}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{FFAD4AA5-3257-4D29-9646-87F0665D07BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFAD4AA5-3257-4D29-9646-87F0665D07BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFAD4AA5-3257-4D29-9646-87F0665D07BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1B55DCE-3741-45E4-9AE9-EB8360D172FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1B55DCE-3741-45E4-9AE9-EB8360D172FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1B55DCE-3741-45E4-9AE9-EB8360D172FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1B55DCE-3741-45E4-9AE9-EB8360D172FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D430B9FA-4665-4811-9E53-99DF5751D5AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D430B9FA-4665-4811-9E53-99DF5751D5AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D430B9FA-4665-4811-9E53-99DF5751D5AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D430B9FA-4665-4811-9E53-99DF5751D5AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43FA3D23-59DA-4AE2-989E-545C85A08311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43FA3D23-59DA-4AE2-989E-545C85A08311}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43FA3D23-59DA-4AE2-989E-545C85A08311}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43FA3D23-59DA-4AE2-989E-545C85A08311}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
