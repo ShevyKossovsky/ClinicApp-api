@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ClinicApp.Service/1.0.0": {
+        "dependencies": {
+          "ClinicApp.Core": "1.0.0"
+        },
+        "runtime": {
+          "ClinicApp.Service.dll": {}
+        }
+      },
+      "ClinicApp.Core/1.0.0": {
+        "runtime": {
+          "ClinicApp.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClinicApp.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClinicApp.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
